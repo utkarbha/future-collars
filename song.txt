@@ -4,8 +4,8 @@ chorus1.txt
 
 chorus2.txt
 
-chorus3.txt
+chorus1.txt
 
-chorus4.txt
+chorus2.txt
 
 It's my life
