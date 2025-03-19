@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Future collars
+=======
+# Lesson 1
+>>>>>>> Lesson1/main
 
 
 
@@ -15,14 +19,22 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
+<<<<<<< HEAD
 git remote add origin https://gitlab.portal.futurecollars.com/utkarsh_bhardwaj/future-collars.git
+=======
+git remote add origin https://gitlab.portal.futurecollars.com/utkarsh_bhardwaj/lesson-1.git
+>>>>>>> Lesson1/main
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
+<<<<<<< HEAD
 - [ ] [Set up project integrations](https://gitlab.portal.futurecollars.com/utkarsh_bhardwaj/future-collars/-/settings/integrations)
+=======
+- [ ] [Set up project integrations](https://gitlab.portal.futurecollars.com/utkarsh_bhardwaj/lesson-1/-/settings/integrations)
+>>>>>>> Lesson1/main
 
 ## Collaborate with your team
 
