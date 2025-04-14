@@ -117,7 +117,7 @@ while True:
                 if homeroom_teacher.class_name == class_name:
                     print(homeroom_teacher.full_name())
 
-        if command == "student":
+        elif command == "student":
             first_name = input("Enter student's first name: ")
             last_name = input("Enter student's last name: ")
 
@@ -169,6 +169,8 @@ while True:
 
         elif command == "end":
             continue
+        else:
+            print("Invalid command")
 
 
 
