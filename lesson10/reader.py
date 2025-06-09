@@ -122,7 +122,7 @@ def main():
         print(f"\n💾 File saved to {dst}")
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
         sys.exit(1)
 
 
