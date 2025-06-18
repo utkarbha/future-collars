@@ -1,0 +1,8 @@
+The calculation time of the factorial for the value 1 is 0.000058 seconds
+The calculation time of the factorial for the value 9 is 0.000031 seconds
+The calculation time of the factorial for the value 23 is 0.000076 seconds
+The calculation time of the factorial for the value 88 is 0.000122 seconds
+The calculation time of the factorial for the value 175 is 0.000139 seconds
+The calculation time of the factorial for the value 299 is 0.000223 seconds
+The calculation time of the factorial for the value 512 is 0.018737 seconds
+The calculation time of the factorial for the value 1024 is 0.005620 seconds
