@@ -23,7 +23,7 @@ def scrape_quotes(min_quotes=100):
     base_url = 'https://quotes.toscrape.com/page/{}/'
     headers = {"User-Agent": "Mozilla/5.0"}
 
-    total_quotes = session.query(Quote).count()  # count existing quotes
+    total_quotes = session.query(Quote).count()
     page = 1
 
     while total_quotes < min_quotes:
@@ -55,7 +55,7 @@ def scrape_quotes(min_quotes=100):
         print(f"Added {new_quotes} new quotes, total now {total_quotes}")
 
         if new_quotes == 0:
-            # No new quotes added on this page, so probably duplicates or no more quotes.
+
             break
 
         page += 1
