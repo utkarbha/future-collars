@@ -1,0 +1,16 @@
+<!-- templates/random.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Quote</title>
+</head>
+<body>
+  <h1>Random Quote</h1>
+  <blockquote>
+    "{{ quote.text }}"<br>
+    — <strong>{{ quote.author }}</strong>
+  </blockquote>
+  <p><em>Tags:</em> {{ quote.tags }}</p>
+  <p><a href="{{ url_for('index') }}">⬅ Back to quotes</a></p>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quote Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem;
+            width: 50%;
+            max-width: 300px;
+        }
+
+        select {
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem;
+        }
+
+        .quote {
+            background-color: white;
+            padding: 1rem;
+            border-left: 5px solid #007BFF;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+
+        .quote-author {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .quote-tags {
+            font-style: italic;
+            color: #555;
+        }
+
+        .random-link {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .random-link a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quote Browser</h1>
+
+    <form method="GET" action="/">
+        <input type="text" name="search" placeholder="Search..." value="{{ search }}">
+        <select name="filter_by">
+            <option value="text" {% if filter_by == 'text' %}selected{% endif %}>Text/Author</option>
+            <option value="tag" {% if filter_by == 'tag' %}selected{% endif %}>Tag</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="random-link">
+        <a href="{{ url_for('random_quote') }}">🎲 Show me a random quote</a>
+    </div>
+
+    {% if quotes %}
+        {% for quote in quotes %}
+            <div class="quote">
+                <div class="quote-text">{{ quote.text }}</div>
+                <div class="quote-author">— {{ quote.author }}</div>
+                <div class="quote-tags">Tags: {{ quote.tags }}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p style="text-align:center;">No quotes found.</p>
+    {% endif %}
+</body>
+</html>
